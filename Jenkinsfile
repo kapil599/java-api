@@ -4,7 +4,8 @@ pipeline {
         skipStagesAfterUnstable()
     }
     stages {
-
+            def mvnHome = tool name: '', type: 'maven'
+        sh "${mvnHome}/bin
         stage('Build'){
             steps {
                 // for prod env
