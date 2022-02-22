@@ -15,7 +15,7 @@ pipeline {
         }
          stage('Deploy'){
              steps {
-                    bat "C:\\Windows\\system32\\config\\systemprofile\\.m2\\repository\\org\\example\\java-api\\1.0-SNAPSHOT\\java-api-1.0-SNAPSHOT.jar oim.neplab.UserManagement"
+                    bat "java -cp C:\\Windows\\system32\\config\\systemprofile\\.m2\\repository\\org\\example\\java-api\\1.0-SNAPSHOT\\java-api-1.0-SNAPSHOT.jar oim.neplab.UserManagement"
              }
          }
     }
