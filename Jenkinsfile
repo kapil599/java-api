@@ -8,8 +8,9 @@ pipeline {
         stage('Build')
         {
             steps {
+                def mvnHome = tool name: '', type: 'maven'
                 // for prod env
-                bat "mvn -Dusername=${username} -Dpassword=${password}  clean install -DskipTests"
+                bat " C:\\PROGRA~1\\JetBrains\\IntelliJ IDEA Community Edition 2021.3.1\\plugins\\maven\\lib\\maven3\\bin\\mvn -Dusername=${username} -Dpassword=${password}  clean install -DskipTests"
             }
         }
 //         stage('Deploy'){
