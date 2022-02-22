@@ -4,9 +4,12 @@ pipeline {
         skipStagesAfterUnstable()
     }
     stages {
-            def mvnHome = tool name: '', type: 'maven'
-        sh "${mvnHome}/bin
-        stage('Build'){
+            
+        stage('Build')
+        
+        def mvnHome = tool name: '', type: 'maven'
+        bat "${mvnHome}/bin
+        {
             steps {
                 // for prod env
                 bat "mvn -Dusername=${username} -Dpassword=${password}  clean install -DskipTests"
