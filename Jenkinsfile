@@ -11,10 +11,10 @@ pipeline {
                 bat "mvn -Dusername=${username} -Dpassword=${password}  clean install -DskipTests"
             }
         }
-        stage('Deploy'){
-            steps {
-                   bat "java -cp C:\\Users\\DELL\\IdeaProjects\\java-api\\1.0-SNAPSHOT\\java-api-1.0-SNAPSHOT.jar oim.neplab.UserManagement"
-            }
-        }
+//         stage('Deploy'){
+//             steps {
+//                    bat "java -cp C:\\Users\\DELL\\IdeaProjects\\java-api\\1.0-SNAPSHOT\\java-api-1.0-SNAPSHOT.jar oim.neplab.UserManagement"
+//             }
+//         }
     }
 }
