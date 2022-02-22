@@ -9,7 +9,8 @@ pipeline {
         {
             steps {
                 // for prod env
-                bat " C:\\PROGRA~1\\JetBrains\\IntelliJ IDEA Community Edition 2021.3.1\\plugins\\maven\\lib\\maven3\\bin\\mvn -Dusername=${username} -Dpassword=${password}  clean install -DskipTests"
+                bat "mvn -Dusername=${username} -Dpassword=${password} clean install -DskipTests"
+                //bat " C:\\PROGRA~1\\JetBrains\\IntelliJ IDEA Community Edition 2021.3.1\\plugins\\maven\\lib\\maven3\\bin\\mvn -Dusername=${username} -Dpassword=${password}  clean install -DskipTests"
             }
         }
 //         stage('Deploy'){
