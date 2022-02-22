@@ -9,8 +9,7 @@ pipeline {
         {
             steps {
                 // for prod env
-                def mvnHome = tool name: '', type: 'maven'
-                bat "${mvnHome}/bin/mvn -Dusername=${username} -Dpassword=${password}  clean install -DskipTests"
+                bat "mvn -Dusername=${username} -Dpassword=${password}  clean install -DskipTests"
             }
         }
 //         stage('Deploy'){
